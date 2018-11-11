@@ -14,6 +14,7 @@ Status destroyStack(Stack *S){
 	free(S->base);
 	S->base = S->top = NULL;
 	S->stacksize = 0;
+        return OK;
 }
 
 Status Push(stack_ptr S,ElemType *e){
