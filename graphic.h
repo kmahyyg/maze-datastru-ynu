@@ -21,7 +21,4 @@ void erasePerson(Person *person);
 void movePerson(Person *person, int key);
 int isMovable(Map *map, Person *person, Key key);
 
-
-
-
 #endif

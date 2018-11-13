@@ -37,50 +37,7 @@ int main(){
 		else
 			exitWindow();
 	}
-	
 
-
-	/*
-	Person person;
-	person.pos.x = 1;
-	person.pos.y = 1;
-	
-	
-	CLS;
-	int x = 31, y = 51;
-	Map *map = createMap((x-1)/2,(y-1)/2);
-	printMap(map);
-	printPerson(&person);
-
-	while(isReachExit(map, &person) == 0){
-		if (isOP == 1 && key < 65 || key > 68)
-			continue;
-		// -- Redraw --
-		// CLS;
-		// printMap(map);
-		if (isOP == 0)
-			printf("Screen Test.\nKeyPress: %d \n",key);
-		else{
-			// gotoCursor()
-			// printf("Screen Test.\nKeyPress: %d \n",key);
-			erasePerson(&person);
-			if (isMovable(map, &person, key))
-				if (key == 65)
-					person.pos.y--;
-				else if(key == 66)
-					person.pos.y++;
-				else if(key == 68)
-					person.pos.x--;
-				else if(key == 67)
-					person.pos.x++;
-			printPerson(&person);
-		}
-	}
-	gotoAndPrint(0, map->height, "Congratulations!");
-	gotoCursor(0,map->height+1);
-	PAUSE;
-	CLS;
-	*/
 	return 0;
 }
 
@@ -335,7 +292,6 @@ void playWindow(){
 	gotoAndPrint(cur_a, "                                                                                      ");
 	if(isWin){
 		gotoCursor(cur_a);
-		// printf(" > Conguatulations !!! You have finished it in %g seconds.", difftime(end_t, start_t));
 		printf(" > Conguatulations !!! You have finished it in %g seconds.", (double)(end_t - start_t)/1000);
 		gotoCursor(cur_a);
 	}
@@ -430,7 +386,7 @@ void highScoreWindow(){
 	CLS;
 	drawFrame();
 	Cursor cur = {SCRSIZE_W/2, SCRSIZE_H/2};
-	gotoAndPrintCenter(cur, "This funtion is under developing.");
+	gotoAndPrintCenter(cur, "This funtion is under developing, Sorry.");
 	cur.y += 2;
 	gotoAndPrintCenter(cur, "Press ENTER to quit.");
 	cur.y += 2;
@@ -455,7 +411,7 @@ void helpWindow(){
 	Cursor cur_op = {SCRSIZE_W/2,SCRSIZE_H/2-10};	// Define draw operation cursor 
 	gotoAndPrintCenter(cur_op, "Maze Game");
 	cur_op.y += 2;
-	gotoAndPrintCenter(cur_op, "Version 1.1");
+	gotoAndPrintCenter(cur_op, "Version 1.2");
 	cur_op.y += 8;
 	gotoAndPrintCenter(cur_op, "This is a test version.");
 	cur_op.y += 2;
@@ -463,7 +419,7 @@ void helpWindow(){
 	cur_op.y += 2;
 	gotoAndPrintCenter(cur_op, "If you find some please contact:");
 	cur_op.y += 2;
-	gotoAndPrintCenter(cur_op, "782920705@qq.com");
+	gotoAndPrintCenter(cur_op, "i@kmahyyg.xyz");
 	cur_op.y += 2;
 	gotoAndPrintCenter(cur_op, "Thanks for your playing.");
 	cur_op.y += 2;

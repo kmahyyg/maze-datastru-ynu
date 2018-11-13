@@ -8,53 +8,6 @@
 
 #include "keyboard.h"
 
-/*
-void init_keyboard(){
-	tcgetattr(0, &init_settings);
-	new_settings = init_settings;
-	new_settings.c_lflag |= ICANON;
-	new_settings.c_lflag |= ECHO;
-	new_settings.c_lflag |= ISIG;
-	new_settings.c_cc[VMIN] = 1;
-	new_settings.c_cc[VTIME] = 0;
-	tcsetattr(0, TCSANOW, &new_settings);
-}
-
-void close_keyboard(void){
-	tcsetattr(0, TCSANOW, &init_settings);
-}
-
-int kbhit(void){
-	unsigned char ch;
-	int nread;
-
-	if (peek_character != -1)
-		return 1;
-	new_settings.c_cc[VMIN] = 0;
-	tcsetattr(0, TCSANOW, &new_settings);
-	nread = read(0, &ch, 1);
-	new_settings.c_cc[VMIN] = 1;
-	tcsetattr(0, TCSANOW, &new_settings);
-	if (nread == 1){
-		peek_character = ch;
-		return 1;
-	}
-	return 0;
-}
-
-int readch(void){
-	char ch;
-
-	if (peek_character != -1){
-		ch = peek_character;
-		peek_character = -1;
-		return ch;
-	}
-	read(0, &ch, 1);
-	return ch;
-}
-*/
-
 int getch(){
 	int c = 0;
 	struct termios org_opts, new_opts;

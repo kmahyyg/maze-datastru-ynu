@@ -3,12 +3,6 @@
 #ifndef KEYBOARD_H
 #define KEYBOARD_H
 
-/* Functions */
-// void init_keyboard(void);
-// void close_keyboard(void);
-// int kbhit(void);
-// int readch(void);
-
 typedef enum {
 	KBD_ESC, KBD_NUM_0, KBD_NUM_1, KBD_NUM_2, KBD_NUM_3, KBD_NUM_4, KBD_NUM_5, KBD_NUM_6, KBD_NUM_7, KBD_NUM_8, KBD_NUM_9,
 	KBD_A, KBD_B, KBD_C, KBD_D, KBD_E, KBD_F, KBD_G, KBD_H, KBD_I, KBD_J, KBD_K, KBD_L, KBD_M, KBD_N, KBD_O, KBD_P, KBD_Q, 
